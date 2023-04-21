@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="./style.css" rel="stylesheet">
+<title>TP5</title>
+</head>
+<body>
+    <h1>my Galery</h1>
+	<div align="center" id="Galerie">
+        <ul class="galerie">
+		    <li><button class="button animated" onClick="f1('./img.jpeg')"><img src="./img.jpeg" id="image1" width="436" height="296" ></button></li>
+            <li><button class="button animated" onClick="f2('./img1.jpeg')"><img src="./img1.jpeg" id="image2" width="498" height="294"></button></li>
+            <li><button class="button animated" onClick="f3('./index.jpeg')"><img src="./index.jpeg" id="image3" width="441" height="292"></button></li>
+
+		</ul>
+	</div>
+	
+	<div align="center" style="display: block;">
+		<input  type="button" id="Précédent" value="Précédent" 
+        onClick="précédent(document.getElementById('insert').src)">
+		<input  type="button" id="Suivant" value="Suivant" 
+        onClick="suivante(document.getElementById('insert').src)">
+		<input  type="button" id="Masquer" value="Masquer" class="button-hide" 
+            onClick="
+            var affichage = document.getElementById('affichage'); 
+            affichage.style.display = 'none';"
+        >
+		<input type="button" id="Ré-afficher" class="button-appear" value="Réafficher" 
+        onClick="
+        var affichage = document.getElementById('affichage'); 
+        affichage.style.display = 'block';"
+        >
+	</div>
+	
+	<div id="affichage" align="center">
+		<img id="insert" src="">
+		<h3 id="titre"></h3>	
+    </div>
+	<script src="./main.js"></script>
+</body>
+</html>
